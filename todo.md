@@ -1,34 +1,32 @@
 # Korean Meal Planning App: Todo List
 
-## GitHub Repository Setup
-- [x] Clone the GitHub repository
-- [x] Configure Git with provided username and email
+## Repository Setup
+- [x] Clone GitHub repository
+- [x] Configure Git credentials
 
 ## Documentation Review
-- [x] Review project overview in `/docs/planning/project-overview.md`
-- [x] Review previous recipe research in `/docs/research/korean-lunch-recipes-part1.md`
-- [x] Review session summary in `/docs/sessions/session-1/summary.md`
+- [x] Review project overview
+- [x] Review existing lunch recipes documentation (part 1)
+- [x] Review existing lunch recipes documentation (part 2)
+- [x] Review session summaries
 
-## Recipe Research
-- [x] Research 2-3 additional Korean lunch recipes meeting criteria:
-  - [x] Easy to prepare (minimal cooking steps)
-  - [x] Suitable for batch cooking on Sundays
-  - [x] Can be stored and reheated throughout the week
-  - [x] Use ingredients commonly available at H-Mart
-  - [x] Different from existing recipes (Dakgangjeong and Kimchi Mandu)
+## Research Tasks
+- [ ] Research Korean dinner recipe #1
+- [ ] Research Korean dinner recipe #2
+- [ ] Research Korean dinner recipe #3 (if time permits)
 
 ## Documentation Creation
-- [x] Create `/docs/research/korean-lunch-recipes-part2.md` with:
-  - [x] Research scope
-  - [x] Key findings
-  - [x] Detailed research for each recipe
-  - [x] Next steps for research
-  - [x] References
+- [ ] Create dinner recipes documentation file
+- [ ] Document research scope
+- [ ] Document key findings
+- [ ] Document detailed recipe information
+- [ ] Document next steps for research
+- [ ] Add references
 
 ## Session Documentation
-- [x] Create `/docs/sessions/session-2/` directory
-- [x] Create session summary in `/docs/sessions/session-2/summary.md`
+- [ ] Create session-3 folder
+- [ ] Create session summary document
 
-## GitHub Commit
-- [ ] Commit all changes to GitHub with meaningful commit message
-- [ ] Push changes to remote repository
+## GitHub Tasks
+- [ ] Commit changes to repository
+- [ ] Push changes to GitHub
