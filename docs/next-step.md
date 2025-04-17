@@ -1,12 +1,14 @@
 # Next Step
 
-Install and set up React Router for navigation between recipe list and detailed recipe views.
+Implement the RecipeDetail component to display comprehensive recipe information.
 
 This task involves:
 
-1. Installing the React Router DOM package
-2. Setting up the basic router configuration in the application
-3. Creating a routes structure for the main page and individual recipe detail pages
-4. Implementing navigation between the recipe list and detail views
+1. Enhancing the existing RecipeDetailPage component to display all recipe information
+2. Creating a structured layout to display:
+   - Recipe ingredients with quantities and units
+   - Step-by-step cooking instructions
+   - Batch cooking instructions
+   - Serving information
 
-This step is a prerequisite for implementing the RecipeDetail component, as it will provide the navigation structure needed to move between the recipe list and individual recipe details. It follows the Single Responsibility Principle by focusing only on navigation setup, with the actual RecipeDetail component implementation to follow in the next step.
+This is a focused implementation task that builds on the existing RecipeDetailPage structure, making use of the recipe data model that's already in place. It will provide users with complete recipe information when they click on a recipe card, which is a core requirement of the application as outlined in the project specs.
