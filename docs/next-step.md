@@ -1,9 +1,15 @@
 # Next Step
 
-Create the recipe data JSON file based on the researched Korean recipes. This task involves:
+Create a RecipeCard component to display recipe information. This task involves:
 
-1. Create a JSON file in the `/public/data/` directory to store recipe data
-2. Convert the researched recipes (Kimbap, Ground Beef Bulgogi, Bibimbap, and Doenjang Jjigae) into JSON format following the TypeScript type definitions established in `src/types/recipe.ts`
-3. Include all recipe details such as ingredients, steps, and batch cooking instructions
+1. Create a new component file at `/src/components/recipes/RecipeCard.tsx`
+2. Implement a React component that displays key recipe information including:
+   - Recipe name
+   - Recipe image
+   - Short description
+   - Preparation and cooking time
+   - A way to view more details (placeholder for now)
+3. Style the component using Tailwind CSS to create an attractive, user-friendly card layout
+4. Update the App.tsx file to import and use the RecipeCard component for displaying available recipes
 
-This step will provide the necessary data structure for rendering recipe components and implementing the meal planning functionality in future steps. Having real recipe data will allow us to build and test components with actual content instead of placeholders.
+This component will serve as a fundamental building block for displaying recipes throughout the application. Creating this component first will allow us to visualize and interact with the recipe data we've already created, and it will be reused in multiple parts of the application including the recipe list and meal plan sections.
