@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { Recipe, WeeklyMealPlan } from './types/recipe'
 import { getAllRecipes, getCurrentMealPlan } from './utils/recipeUtils'
+import RecipeCard from './components/recipes/RecipeCard'
 
 function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [currentMealPlan, setCurrentMealPlan] = useState<WeeklyMealPlan | null>(null)
   const [loading, setLoading] = useState(true)
+  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null)
 
   useEffect(() => {
     const loadInitialData = async () => {
@@ -28,6 +30,12 @@ function App() {
 
     loadInitialData()
   }, [])
+
+  const handleRecipeClick = (recipe: Recipe) => {
+    setSelectedRecipe(recipe)
+    // In the future, this will navigate to a recipe detail page or show a modal
+    console.log('Recipe selected:', recipe.name)
+  }
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -55,7 +63,15 @@ function App() {
             <section>
               <h2 className="text-2xl font-semibold mb-4">Available Recipes</h2>
               {recipes.length > 0 ? (
-                <p>Recipe list will go here</p>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  {recipes.map(recipe => (
+                    <RecipeCard 
+                      key={recipe.id} 
+                      recipe={recipe} 
+                      onClick={handleRecipeClick}
+                    />
+                  ))}
+                </div>
               ) : (
                 <p>Recipe data will be added soon.</p>
               )}

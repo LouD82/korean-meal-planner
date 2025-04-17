@@ -5,9 +5,19 @@ import { Recipe, WeeklyMealPlan } from '../types/recipe';
  * @returns Promise that resolves to an array of recipes
  */
 export const getAllRecipes = async (): Promise<Recipe[]> => {
-  // In the future, this would load from an API or data file
-  // For now, it returns an empty array as a placeholder
-  return [];
+  try {
+    // Fetch the recipes from the JSON file
+    const response = await fetch('/data/recipes.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch recipes');
+    }
+    
+    const data = await response.json();
+    return data.recipes || [];
+  } catch (error) {
+    console.error('Error loading recipes:', error);
+    return [];
+  }
 };
 
 /**
@@ -21,13 +31,40 @@ export const getRecipeById = async (id: string): Promise<Recipe | undefined> => 
 };
 
 /**
+ * Gets all weekly meal plans
+ * @returns Promise that resolves to an array of meal plans
+ */
+export const getAllMealPlans = async (): Promise<WeeklyMealPlan[]> => {
+  try {
+    // Fetch the meal plans from the JSON file
+    const response = await fetch('/data/recipes.json');
+    if (!response.ok) {
+      throw new Error('Failed to fetch meal plans');
+    }
+    
+    const data = await response.json();
+    return data.weeklyMealPlans || [];
+  } catch (error) {
+    console.error('Error loading meal plans:', error);
+    return [];
+  }
+};
+
+/**
  * Gets the current weekly meal plan
  * @returns Promise that resolves to the current weekly meal plan
  */
 export const getCurrentMealPlan = async (): Promise<WeeklyMealPlan | null> => {
-  // In the future, this would load from an API, data file, or local storage
-  // For now, it returns null as a placeholder
-  return null;
+  try {
+    const mealPlans = await getAllMealPlans();
+    
+    // For now, just return the first meal plan as the current one
+    // In a more advanced implementation, this could be based on the current date or user selection
+    return mealPlans.length > 0 ? mealPlans[0] : null;
+  } catch (error) {
+    console.error('Error getting current meal plan:', error);
+    return null;
+  }
 };
 
 /**
@@ -36,6 +73,37 @@ export const getCurrentMealPlan = async (): Promise<WeeklyMealPlan | null> => {
  * @returns Promise that resolves to an array of ingredients needed for the meal plan
  */
 export const generateGroceryList = async (mealPlan: WeeklyMealPlan): Promise<string[]> => {
-  // This is a placeholder for future functionality
-  return [];
+  try {
+    // Get the recipes for the current meal plan
+    const lunchRecipe = await getRecipeById(mealPlan.lunchRecipeId);
+    const dinnerRecipe = await getRecipeById(mealPlan.dinnerRecipeId);
+    
+    const groceryItems: string[] = [];
+    
+    // Add lunch recipe ingredients
+    if (lunchRecipe) {
+      lunchRecipe.ingredients.forEach(ingredient => {
+        const item = ingredient.unit 
+          ? `${ingredient.amount} ${ingredient.unit} ${ingredient.name}`
+          : `${ingredient.amount} ${ingredient.name}`;
+        groceryItems.push(item);
+      });
+    }
+    
+    // Add dinner recipe ingredients
+    if (dinnerRecipe) {
+      dinnerRecipe.ingredients.forEach(ingredient => {
+        const item = ingredient.unit 
+          ? `${ingredient.amount} ${ingredient.unit} ${ingredient.name}`
+          : `${ingredient.amount} ${ingredient.name}`;
+        groceryItems.push(item);
+      });
+    }
+    
+    // In a more advanced implementation, this would combine similar ingredients
+    return groceryItems.sort();
+  } catch (error) {
+    console.error('Error generating grocery list:', error);
+    return [];
+  }
 };
