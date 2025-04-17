@@ -1,3 +1,6 @@
+# Session 4
+Determined next step to set up initial project structure using Vite with React and TypeScript.
+
 # Session 3
 Researched and documented two Korean dinner recipes (Bibimbap and Doenjang Jjigae) suitable for batch cooking.
 
