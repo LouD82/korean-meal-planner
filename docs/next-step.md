@@ -1,15 +1,17 @@
 # Next Step
 
-Create a RecipeCard component to display recipe information. This task involves:
+Create a RecipeDetail component to display detailed recipe information. This task involves:
 
-1. Create a new component file at `/src/components/recipes/RecipeCard.tsx`
-2. Implement a React component that displays key recipe information including:
-   - Recipe name
-   - Recipe image
-   - Short description
+1. Create a new component file at `/src/components/recipes/RecipeDetail.tsx`
+2. Implement a React component that displays comprehensive recipe information including:
+   - Recipe name, image, and type (lunch/dinner)
+   - Full description
    - Preparation and cooking time
-   - A way to view more details (placeholder for now)
-3. Style the component using Tailwind CSS to create an attractive, user-friendly card layout
-4. Update the App.tsx file to import and use the RecipeCard component for displaying available recipes
+   - Ingredients list with amounts and units
+   - Step-by-step cooking instructions
+   - Batch cooking instructions
+   - Servings information
+3. Style the component using Tailwind CSS to create a clean, user-friendly layout
+4. Update the App.tsx file to conditionally render this component when a recipe is selected
 
-This component will serve as a fundamental building block for displaying recipes throughout the application. Creating this component first will allow us to visualize and interact with the recipe data we've already created, and it will be reused in multiple parts of the application including the recipe list and meal plan sections.
+This component will provide users with detailed information about each recipe, including ingredients and cooking instructions. Creating this component next builds on the RecipeCard implementation from the previous session, enabling users to view the complete recipe details when they click on a recipe card.
