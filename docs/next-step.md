@@ -1,3 +1,9 @@
 # Next Step
 
-Research 2 Korean dinner recipes suitable for batch cooking, focusing on simplicity, ingredient availability at H-Mart, and minimal preparation time. Document findings in `/docs/research/recipes/korean-dinner-recipes-part1.md` following the same format established for lunch recipes.
+Set up the initial project structure using Vite with React and TypeScript. This task involves:
+
+1. Initialize a new Vite project with React and TypeScript
+2. Configure the basic project structure with appropriate folders for components, types, and assets
+3. Update the README.md with project setup and development instructions
+
+This step will establish the foundation for the Korean Meal Planner application, creating the environment where we'll implement the meal planning features and incorporate the researched recipes.
