@@ -1,0 +1,491 @@
+{
+  "recipes": [
+    {
+      "id": "kimbap",
+      "name": "Kimbap (Korean Seaweed Rice Rolls)",
+      "type": "lunch",
+      "description": "Kimbap is a popular Korean dish consisting of rice, vegetables, and sometimes meat, all rolled in seaweed. It's an excellent option for batch cooking as you can prepare multiple rolls at once and store them for daily consumption throughout the week.",
+      "prepTime": 45,
+      "cookTime": 15,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "short-grain rice",
+          "amount": "3",
+          "unit": "cups"
+        },
+        {
+          "name": "seaweed sheets (gim)",
+          "amount": "5",
+          "unit": "sheets"
+        },
+        {
+          "name": "carrots",
+          "amount": "1-2",
+          "unit": ""
+        },
+        {
+          "name": "cucumber",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "name": "eggs",
+          "amount": "3-4",
+          "unit": ""
+        },
+        {
+          "name": "pickled yellow radish (danmuji)",
+          "amount": "1",
+          "unit": "package"
+        },
+        {
+          "name": "imitation crab sticks (optional)",
+          "amount": "1",
+          "unit": "package"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "1",
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "Cook rice according to package instructions. While still warm, mix with 1 tbsp sesame oil and 1 tsp salt. Allow to cool slightly."
+        },
+        {
+          "description": "Julienne carrots and sauté for 2-3 minutes with a pinch of salt. Set aside to cool."
+        },
+        {
+          "description": "Julienne cucumber, sprinkle with salt, and after 5 minutes, squeeze out excess water."
+        },
+        {
+          "description": "Beat eggs with a pinch of salt, make thin omelets, and slice into strips."
+        },
+        {
+          "description": "Slice pickled radish into strips."
+        },
+        {
+          "description": "Place a sheet of seaweed on a bamboo mat, shiny side down."
+        },
+        {
+          "description": "Spread about 3/4 cup of rice evenly over the seaweed, leaving a small border at the top."
+        },
+        {
+          "description": "Arrange fillings in lines across the center of the rice."
+        },
+        {
+          "description": "Roll tightly using the bamboo mat, applying gentle pressure."
+        },
+        {
+          "description": "Brush the finished roll with a little sesame oil for shine and flavor."
+        },
+        {
+          "description": "Slice each roll into 8 pieces with a sharp knife."
+        }
+      ],
+      "batchCookingInstructions": "For immediate consumption (1-2 days): Wrap each whole roll tightly in plastic wrap before slicing and refrigerate. For longer storage (2-3 days): Keep the rolls uncut, wrap tightly in plastic wrap, then foil, and refrigerate. Slice only when ready to eat. Don't freeze kimbap as the rice texture will deteriorate.",
+      "imageUrl": "/images/kimbap.jpg"
+    },
+    {
+      "id": "ground-beef-bulgogi",
+      "name": "Ground Beef Bulgogi Meal Prep Bowls",
+      "type": "lunch",
+      "description": "This simplified version of traditional bulgogi uses ground beef instead of sliced beef, making it much easier and quicker to prepare. When portioned into meal prep containers with rice and vegetables, it creates a complete, balanced meal that reheats beautifully throughout the week.",
+      "prepTime": 20,
+      "cookTime": 25,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "ground beef (85-90% lean)",
+          "amount": "1",
+          "unit": "lb"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": ""
+        },
+        {
+          "name": "garlic",
+          "amount": "4",
+          "unit": "cloves"
+        },
+        {
+          "name": "green onions",
+          "amount": "2",
+          "unit": ""
+        },
+        {
+          "name": "mushrooms (optional)",
+          "amount": "8",
+          "unit": "oz"
+        },
+        {
+          "name": "cooked rice",
+          "amount": "4",
+          "unit": "cups"
+        },
+        {
+          "name": "broccoli florets",
+          "amount": "2",
+          "unit": "cups"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1/4",
+          "unit": "cup"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "mirin (rice wine) or apple juice",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "grated ginger",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "amount": "1/2",
+          "unit": "tsp"
+        },
+        {
+          "name": "toasted sesame seeds",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "gochujang (Korean chili paste, optional)",
+          "amount": "1-2",
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "Cook rice according to package instructions. This can be done while preparing the beef mixture."
+        },
+        {
+          "description": "Steam broccoli florets until just tender (about 4-5 minutes). Immediately rinse with cold water to stop cooking and set aside."
+        },
+        {
+          "description": "In a bowl, mix together soy sauce, brown sugar, mirin, sesame oil, grated ginger, black pepper, and gochujang (if using)."
+        },
+        {
+          "description": "Heat a large skillet over medium-high heat."
+        },
+        {
+          "description": "Add ground beef and break it apart with a spatula as it cooks."
+        },
+        {
+          "description": "When beef is halfway cooked (still some pink), add diced onion, minced garlic, mushrooms (if using), and white parts of green onions."
+        },
+        {
+          "description": "Continue cooking until beef is fully browned and vegetables are soft."
+        },
+        {
+          "description": "Pour in the bulgogi sauce and stir well to combine. Cook for another 2-3 minutes until the sauce thickens slightly."
+        },
+        {
+          "description": "Stir in half the sesame seeds and the green parts of the green onions."
+        },
+        {
+          "description": "Divide cooked rice among 4-5 meal prep containers."
+        },
+        {
+          "description": "Top with a portion of the beef bulgogi mixture."
+        },
+        {
+          "description": "Add a portion of steamed broccoli to each container."
+        },
+        {
+          "description": "Sprinkle with remaining sesame seeds and green onions."
+        }
+      ],
+      "batchCookingInstructions": "Refrigerate: Allow containers to cool before securing lids. Store in the refrigerator for up to 4 days. Freeze: These bowls freeze well for up to 2 months. Thaw overnight in the refrigerator before reheating. Microwave: Heat for 2-3 minutes, stirring halfway through if possible. Stovetop: For best results when reheating from refrigerated (not frozen), empty contents into a small pan and heat over medium heat for about 5 minutes, stirring occasionally.",
+      "imageUrl": "/images/ground-beef-bulgogi.jpg"
+    },
+    {
+      "id": "bibimbap",
+      "name": "Bibimbap Meal Prep Bowls",
+      "type": "dinner",
+      "description": "Bibimbap (비빔밥), meaning \"mixed rice,\" is a beloved Korean dish consisting of rice topped with seasoned vegetables, protein, and a spicy gochujang sauce. This meal prep version simplifies the traditional recipe while maintaining its nutritional balance and flavors, making it perfect for batch cooking and enjoying throughout the week.",
+      "prepTime": 40,
+      "cookTime": 30,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "cooked short-grain rice",
+          "amount": "4",
+          "unit": "cups"
+        },
+        {
+          "name": "lean ground beef or thinly sliced beef",
+          "amount": "8",
+          "unit": "oz"
+        },
+        {
+          "name": "spinach",
+          "amount": "2",
+          "unit": "cups"
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "large"
+        },
+        {
+          "name": "zucchini",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "bean sprouts",
+          "amount": "1",
+          "unit": "cup"
+        },
+        {
+          "name": "eggs",
+          "amount": "4-5",
+          "unit": ""
+        },
+        {
+          "name": "sesame oil",
+          "amount": "3",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "green onions",
+          "amount": "2",
+          "unit": ""
+        },
+        {
+          "name": "soy sauce",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "minced garlic",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "grated ginger",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "gochujang (Korean red pepper paste)",
+          "amount": "3",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sugar or honey",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "rice vinegar",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "water",
+          "amount": "1",
+          "unit": "tbsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "Cook rice according to package instructions. Allow to cool completely before storing in airtight containers."
+        },
+        {
+          "description": "Mix beef marinade: soy sauce, brown sugar, minced garlic, sesame oil, and grated ginger in a bowl."
+        },
+        {
+          "description": "Add ground beef or sliced beef and marinate for at least 15 minutes."
+        },
+        {
+          "description": "Heat a pan over medium-high heat, add the marinated beef, and cook until browned (about 5-7 minutes). Set aside to cool completely."
+        },
+        {
+          "description": "Spinach: Blanch in boiling water for 30 seconds, drain, rinse with cold water, and squeeze out excess moisture. Season with 1 tsp sesame oil, 1/2 tsp salt, and 1 tsp minced garlic."
+        },
+        {
+          "description": "Carrots: Sauté julienned carrots in 1 tsp sesame oil for 2-3 minutes with a pinch of salt."
+        },
+        {
+          "description": "Zucchini: Sauté julienned zucchini in 1 tsp sesame oil for 2-3 minutes with a pinch of salt."
+        },
+        {
+          "description": "Bean sprouts: Blanch in boiling water for 2 minutes, drain, rinse with cold water. Season with 1 tsp sesame oil, 1/2 tsp salt, and 1 tsp minced garlic."
+        },
+        {
+          "description": "Make gochujang sauce: Mix gochujang, sugar or honey, sesame oil, water, rice vinegar, and minced garlic in a bowl until well combined."
+        },
+        {
+          "description": "For batch prep, store rice, cooked beef, and each vegetable in separate containers. Alternatively, divide rice among meal prep containers, add beef and arranged vegetables on top (keeping each component separate). Store sauce separately."
+        }
+      ],
+      "batchCookingInstructions": "Refrigerate all components in airtight containers for up to 4-5 days. The sauce will keep for up to a week refrigerated. For extended storage, rice, beef, and blanched vegetables can be frozen separately for up to 2 months. When ready to serve, assemble the bowl with rice on the bottom, vegetables arranged on top, and beef in the center. Heat the assembled bowl in the microwave for 1-2 minutes if desired. Fry an egg (sunny-side up is traditional) and place on top of the heated bowl. Drizzle with gochujang sauce, sprinkle with sesame seeds and green onions. Mix everything together thoroughly before eating.",
+      "imageUrl": "/images/bibimbap.jpg"
+    },
+    {
+      "id": "doenjang-jjigae",
+      "name": "Doenjang Jjigae (Korean Soybean Paste Stew)",
+      "type": "dinner",
+      "description": "Doenjang Jjigae is a hearty, comforting Korean stew made with fermented soybean paste (doenjang), tofu, and vegetables. It's a staple in Korean cuisine and perfect for batch cooking as the flavors actually improve after a day or two, making it ideal for weekly meal preparation.",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "doenjang (Korean fermented soybean paste)",
+          "amount": "4",
+          "unit": "tbsp"
+        },
+        {
+          "name": "gochujang (optional, for spiciness)",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "garlic",
+          "amount": "2",
+          "unit": "cloves"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "zucchini",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "potato",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "firm tofu",
+          "amount": "14",
+          "unit": "oz"
+        },
+        {
+          "name": "green onions",
+          "amount": "2",
+          "unit": ""
+        },
+        {
+          "name": "water or anchovy-kelp stock",
+          "amount": "6",
+          "unit": "cups"
+        },
+        {
+          "name": "mushrooms (shiitake or button)",
+          "amount": "8",
+          "unit": "oz"
+        },
+        {
+          "name": "Korean chili pepper (optional)",
+          "amount": "1",
+          "unit": ""
+        }
+      ],
+      "steps": [
+        {
+          "description": "Heat vegetable oil in a large pot over medium heat."
+        },
+        {
+          "description": "Add onions and garlic, sautéing until translucent (about 3-4 minutes)."
+        },
+        {
+          "description": "Add potatoes and cook for 2-3 minutes."
+        },
+        {
+          "description": "Add water or stock to the pot and bring to a boil."
+        },
+        {
+          "description": "Reduce heat to medium-low and add doenjang paste, dissolving it into the broth."
+        },
+        {
+          "description": "If using gochujang, add it now and stir well."
+        },
+        {
+          "description": "Add zucchini and mushrooms, simmer for 5 minutes."
+        },
+        {
+          "description": "Add tofu cubes carefully to avoid breaking them."
+        },
+        {
+          "description": "Simmer for another 10-15 minutes until potatoes are soft and flavors are well-combined."
+        },
+        {
+          "description": "In the last minute of cooking, add green onions and Korean chili pepper if using."
+        },
+        {
+          "description": "Allow the stew to cool completely before transferring to storage containers."
+        },
+        {
+          "description": "Divide into portion-sized containers for easy reheating."
+        }
+      ],
+      "batchCookingInstructions": "Refrigerate: Store in airtight containers for up to 5 days. The flavor will actually improve after the first day! Freeze: This stew freezes very well. Portion into freezer-safe containers and freeze for up to 2 months. Thaw overnight in the refrigerator before reheating. To reheat on stovetop (preferred method): Transfer to a small pot and heat over medium heat for 5-7 minutes, stirring occasionally. For microwave: Heat for 2-3 minutes, stirring halfway through. Serve hot with a side of fresh steamed rice and kimchi.",
+      "imageUrl": "/images/doenjang-jjigae.jpg"
+    }
+  ],
+  "weeklyMealPlans": [
+    {
+      "id": 1,
+      "weekNumber": 1,
+      "lunchRecipeId": "kimbap",
+      "dinnerRecipeId": "bibimbap"
+    },
+    {
+      "id": 2,
+      "weekNumber": 2,
+      "lunchRecipeId": "ground-beef-bulgogi",
+      "dinnerRecipeId": "doenjang-jjigae"
+    }
+  ]
+}
