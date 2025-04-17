@@ -1,3 +1,6 @@
+# Session 9
+Created the RecipeCard component, configured Tailwind CSS, and updated the App to display recipe cards in a responsive grid layout.
+
 # Session 8
 Determined next step to create the RecipeCard component for displaying recipe information in the application.
 
