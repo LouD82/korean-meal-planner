@@ -1,13 +1,12 @@
 # Next Step
 
-Create the RecipeDetail component to display comprehensive recipe information when a recipe card is clicked.
+Install and set up React Router for navigation between recipe list and detailed recipe views.
 
-The RecipeDetail component should:
+This task involves:
 
-1. Display all recipe details including name, image, type, description, preparation time, cooking time, servings, ingredients list, and preparation steps
-2. Include the batch cooking instructions for the recipe
-3. Be properly styled with Tailwind CSS
-4. Implement a way to navigate back to the recipe list view 
-5. Set up proper routing using React Router or a similar navigation mechanism if needed
+1. Installing the React Router DOM package
+2. Setting up the basic router configuration in the application
+3. Creating a routes structure for the main page and individual recipe detail pages
+4. Implementing navigation between the recipe list and detail views
 
-This step follows the implementation of the RecipeCard component and will allow users to view full recipe details, which is essential for the meal planning application. This adds the ability to transition from browsing recipes to viewing detailed information about a selected recipe.
+This step is a prerequisite for implementing the RecipeDetail component, as it will provide the navigation structure needed to move between the recipe list and individual recipe details. It follows the Single Responsibility Principle by focusing only on navigation setup, with the actual RecipeDetail component implementation to follow in the next step.
