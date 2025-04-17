@@ -1,3 +1,6 @@
+# Session 8
+Determined next step to create the RecipeCard component for displaying recipe information in the application.
+
 # Session 7
 Created recipe data JSON file with four Korean recipes and placeholder images, providing the data foundation for the application.
 
