@@ -1,3 +1,6 @@
+# Session 6
+Determined next step to create the recipe data JSON file based on the researched Korean recipes.
+
 # Session 5
 Set up initial project structure using Vite with React and TypeScript, creating the foundational architecture for the Korean Meal Planner application.
 

@@ -1,9 +1,9 @@
 # Next Step
 
-Set up the initial project structure using Vite with React and TypeScript. This task involves:
+Create the recipe data JSON file based on the researched Korean recipes. This task involves:
 
-1. Initialize a new Vite project with React and TypeScript
-2. Configure the basic project structure with appropriate folders for components, types, and assets
-3. Update the README.md with project setup and development instructions
+1. Create a JSON file in the `/public/data/` directory to store recipe data
+2. Convert the researched recipes (Kimbap, Ground Beef Bulgogi, Bibimbap, and Doenjang Jjigae) into JSON format following the TypeScript type definitions established in `src/types/recipe.ts`
+3. Include all recipe details such as ingredients, steps, and batch cooking instructions
 
-This step will establish the foundation for the Korean Meal Planner application, creating the environment where we'll implement the meal planning features and incorporate the researched recipes.
+This step will provide the necessary data structure for rendering recipe components and implementing the meal planning functionality in future steps. Having real recipe data will allow us to build and test components with actual content instead of placeholders.
