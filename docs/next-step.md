@@ -1,12 +1,12 @@
 # Next Step
 
-Add additional Korean recipes to enhance meal plan variety
+Implement recipe search and filtering functionality
 
 This task involves:
 
-1. Research 2-3 additional Korean lunch recipes suitable for batch cooking
-2. Create JSON data for these new recipes following the existing recipe data structure
-3. Add the new recipes to the application's data source
-4. Ensure the new recipes are properly integrated with the meal plan generator
+1. Adding a search bar component to allow users to search for recipes by name, ingredient, or meal type
+2. Implementing filtering functionality to filter recipes based on criteria like meal type (lunch/dinner), preparation time, or cooking time
+3. Updating the Recipes page to display filtered results
+4. Ensuring the search/filter is responsive and user-friendly
 
-This focused task addresses the need for more recipe variety, providing users with additional meal options when generating their weekly meal plans.
+This focused task will enhance the user experience by making it easier to find specific recipes, especially as the recipe collection grows beyond the current 7 recipes. The search and filtering functionality is a natural next step in the application's evolution since we now have a significant number of recipes that would benefit from improved discoverability.
