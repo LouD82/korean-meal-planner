@@ -1,4 +1,4 @@
-import { Recipe, WeeklyMealPlan } from '../types/recipe';
+import { Recipe, WeeklyMealPlan, Ingredient } from '../types/recipe';
 
 /**
  * Gets all available recipes
@@ -77,6 +77,8 @@ export const getCurrentMealPlan = async (): Promise<WeeklyMealPlan | null> => {
   }
 };
 
+import { optimizeGroceryList } from './groceryUtils';
+
 /**
  * Generates a grocery list from a weekly meal plan
  * @param mealPlan The weekly meal plan
@@ -88,30 +90,22 @@ export const generateGroceryList = async (mealPlan: WeeklyMealPlan): Promise<str
     const lunchRecipe = await getRecipeById(mealPlan.lunchRecipeId);
     const dinnerRecipe = await getRecipeById(mealPlan.dinnerRecipeId);
     
-    const groceryItems: string[] = [];
+    const allIngredients: Ingredient[] = [];
     
     // Add lunch recipe ingredients
     if (lunchRecipe) {
-      lunchRecipe.ingredients.forEach(ingredient => {
-        const item = ingredient.unit 
-          ? `${ingredient.amount} ${ingredient.unit} ${ingredient.name}`
-          : `${ingredient.amount} ${ingredient.name}`;
-        groceryItems.push(item);
-      });
+      allIngredients.push(...lunchRecipe.ingredients);
     }
     
     // Add dinner recipe ingredients
     if (dinnerRecipe) {
-      dinnerRecipe.ingredients.forEach(ingredient => {
-        const item = ingredient.unit 
-          ? `${ingredient.amount} ${ingredient.unit} ${ingredient.name}`
-          : `${ingredient.amount} ${ingredient.name}`;
-        groceryItems.push(item);
-      });
+      allIngredients.push(...dinnerRecipe.ingredients);
     }
     
-    // In a more advanced implementation, this would combine similar ingredients
-    return groceryItems.sort();
+    // Optimize the grocery list by combining duplicate ingredients and similar items
+    const optimizedList = optimizeGroceryList(allIngredients);
+    
+    return optimizedList;
   } catch (error) {
     console.error('Error generating grocery list:', error);
     return [];
