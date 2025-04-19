@@ -4,6 +4,7 @@ import RecipesPage from './pages/RecipesPage'
 import RecipeDetailPage from './pages/RecipeDetailPage'
 import MealPlansPage from './pages/MealPlansPage'
 import GroceryListPage from './pages/GroceryListPage'
+import SettingsPage from './pages/SettingsPage'
 import Layout from './components/layout/Layout'
 
 /**
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: 'grocery-list',
         element: <GroceryListPage />,
+      },
+      {
+        path: 'settings',
+        element: <SettingsPage />,
       },
       {
         path: '*',

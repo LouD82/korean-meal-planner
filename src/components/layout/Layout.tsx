@@ -1,6 +1,7 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
+import { useApplySettings } from '../../hooks/useApplySettings';
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,12 +11,49 @@ interface LayoutProps {
  * Layout component that wraps the entire application and provides common elements
  */
 const Layout = ({ children }: LayoutProps) => {
+  // Apply UI settings from the settings context
+  const { settings } = useApplySettings();
+  
+  // Add CSS variables to handle font size settings
+  useEffect(() => {
+    const root = document.documentElement;
+    
+    // Set font size variables based on settings
+    if (settings.ui.fontSize === 'small') {
+      root.style.setProperty('--base-font-size', '0.875rem');
+    } else if (settings.ui.fontSize === 'medium') {
+      root.style.setProperty('--base-font-size', '1rem');
+    } else if (settings.ui.fontSize === 'large') {
+      root.style.setProperty('--base-font-size', '1.125rem');
+    }
+    
+    // Handle dark mode
+    if (settings.ui.darkMode) {
+      root.style.setProperty('--bg-color', '#1a1a1a');
+      root.style.setProperty('--text-color', '#f3f4f6');
+      root.style.setProperty('--card-bg', '#2d2d2d');
+    } else {
+      root.style.setProperty('--bg-color', '#f9fafb');
+      root.style.setProperty('--text-color', '#111827');
+      root.style.setProperty('--card-bg', '#ffffff');
+    }
+    
+    // Handle compact view
+    if (settings.ui.compactView) {
+      root.style.setProperty('--spacing-unit', '0.75');
+    } else {
+      root.style.setProperty('--spacing-unit', '1');
+    }
+  }, [settings.ui.fontSize, settings.ui.darkMode, settings.ui.compactView]);
   return (
     <div style={{ 
       display: 'flex', 
       flexDirection: 'column', 
       minHeight: '100vh',
-      backgroundColor: '#f9fafb'
+      backgroundColor: 'var(--bg-color, #f9fafb)',
+      color: 'var(--text-color, #111827)',
+      fontSize: 'var(--base-font-size, 1rem)',
+      transition: 'background-color 0.3s, color 0.3s, font-size 0.3s'
     }}>
       <header style={{ 
         background: 'linear-gradient(to right, #16a34a, #15803d)',

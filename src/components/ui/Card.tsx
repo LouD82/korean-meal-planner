@@ -1,4 +1,5 @@
 import React from 'react';
+import '../ui/theme.css';
 
 interface CardProps {
   children: React.ReactNode;
@@ -18,14 +19,26 @@ const Card: React.FC<CardProps> = ({
   hoverable = false,
   highlighted = false,
 }) => {
-  const baseClasses = 'bg-white rounded-lg shadow-md overflow-hidden';
-  const hoverClasses = hoverable ? 'hover:shadow-lg transition-shadow duration-300 cursor-pointer' : '';
-  const highlightedClasses = highlighted ? 'border-2 border-green-500' : '';
+  const hoverStyle = hoverable ? {
+    cursor: 'pointer',
+    transition: 'box-shadow 0.3s',
+    ':hover': {
+      boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+    }
+  } : {};
+  
+  const highlightedStyle = highlighted ? {
+    border: '2px solid #22c55e'
+  } : {};
   
   return (
     <div 
-      className={`${baseClasses} ${hoverClasses} ${highlightedClasses} ${className}`}
+      className={`card ${className}`}
       onClick={onClick}
+      style={{
+        ...hoverStyle,
+        ...highlightedStyle
+      }}
     >
       {children}
     </div>
@@ -39,19 +52,36 @@ export const CardHeader: React.FC<{
   children: React.ReactNode;
   className?: string;
 }> = ({ children, className = '' }) => {
-  return <div className={`p-4 border-b border-gray-100 ${className}`}>{children}</div>;
+  return <div 
+    className={`${className}`}
+    style={{
+      padding: 'var(--padding-base, 1rem)',
+      borderBottom: '1px solid #e5e7eb'
+    }}
+  >{children}</div>;
 };
 
 export const CardContent: React.FC<{
   children: React.ReactNode;
   className?: string;
 }> = ({ children, className = '' }) => {
-  return <div className={`p-4 ${className}`}>{children}</div>;
+  return <div 
+    className={`${className}`}
+    style={{
+      padding: 'var(--padding-base, 1rem)'
+    }}
+  >{children}</div>;
 };
 
 export const CardFooter: React.FC<{
   children: React.ReactNode;
   className?: string;
 }> = ({ children, className = '' }) => {
-  return <div className={`p-4 border-t border-gray-100 ${className}`}>{children}</div>;
+  return <div 
+    className={`${className}`}
+    style={{
+      padding: 'var(--padding-base, 1rem)',
+      borderTop: '1px solid #e5e7eb'
+    }}
+  >{children}</div>;
 };

@@ -141,6 +141,15 @@ const Navigation = () => {
             >
               Grocery List
             </NavLink>
+            <NavLink 
+              to="/settings" 
+              style={({ isActive }) => ({
+                ...baseNavLinkStyle,
+                ...(isActive ? activeLinkStyle : inactiveLinkStyle)
+              })}
+            >
+              Settings
+            </NavLink>
           </div>
           
           {/* Empty div to maintain flex layout on mobile */}
@@ -205,6 +214,15 @@ const Navigation = () => {
             onClick={() => setIsMenuOpen(false)}
           >
             Grocery List
+          </NavLink>
+          <NavLink 
+            to="/settings" 
+            style={({ isActive }) => 
+              isActive ? mobileActiveLinkStyle : mobileLinkStyle
+            }
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Settings
           </NavLink>
         </div>
       </div>
