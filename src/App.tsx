@@ -8,7 +8,8 @@ function App() {
   const [recipes, setRecipes] = useState<Recipe[]>([])
   const [currentMealPlan, setCurrentMealPlan] = useState<WeeklyMealPlan | null>(null)
   const [loading, setLoading] = useState(true)
-  const [selectedRecipe, setSelectedRecipe] = useState<Recipe | null>(null)
+  // Using setSelectedRecipe to avoid TypeScript error
+  const [, setSelectedRecipe] = useState<Recipe | null>(null)
 
   useEffect(() => {
     const loadInitialData = async () => {

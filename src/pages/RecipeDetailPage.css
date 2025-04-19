@@ -1,0 +1,156 @@
+/* Recipe detail specific styles */
+.recipe-ingredient-list li {
+  transition: color 0.2s ease;
+}
+
+.recipe-ingredient-list li:hover {
+  color: #059669; /* Tailwind's green-600 */
+}
+
+.recipe-step {
+  transition: background-color 0.2s ease;
+}
+
+.recipe-step:hover {
+  background-color: #f9fafb; /* Tailwind's gray-50 */
+}
+
+/* Print-specific styles */
+@media print {
+  /* Hide navigation and other non-essential elements */
+  nav, button, .print\:hidden, footer, header {
+    display: none !important;
+  }
+  
+  /* Ensure the recipe content fills the page */
+  .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  
+  /* Adjust layout for printing */
+  .flex-col, .flex-row, .lg\:flex, .md\:flex {
+    display: block !important;
+  }
+  
+  /* Ensure all recipe content is visible */
+  .md\:w-1\/3, .md\:w-2\/3, .lg\:w-1\/3, .lg\:w-2\/3 {
+    width: 100% !important;
+  }
+  
+  /* Improve readability for printed content */
+  body {
+    font-size: 12pt !important;
+    line-height: 1.5 !important;
+    background-color: white !important;
+    color: black !important;
+  }
+  
+  h1 {
+    font-size: 20pt !important;
+    margin-top: 10mm !important;
+    margin-bottom: 5mm !important;
+  }
+  
+  h2 {
+    font-size: 16pt !important;
+    margin-top: 8mm !important;
+    margin-bottom: 4mm !important;
+  }
+
+  h3 {
+    font-size: 14pt !important;
+    margin-top: 6mm !important;
+    margin-bottom: 3mm !important;
+  }
+  
+  /* Ensure images print well */
+  img {
+    max-width: 100mm !important;
+    height: auto !important;
+    margin: 5mm auto !important;
+    display: block !important;
+  }
+  
+  /* Add page breaks where appropriate */
+  .recipe-section {
+    page-break-inside: avoid;
+    margin-bottom: 8mm !important;
+    border: none !important;
+    box-shadow: none !important;
+    background-color: white !important;
+  }
+  
+  /* Show URLs for links */
+  a::after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+  }
+  
+  /* Remove shadows and backgrounds */
+  .shadow-md, .shadow-lg, .shadow-sm {
+    box-shadow: none !important;
+  }
+  
+  .bg-white, .bg-gray-50, .bg-amber-50 {
+    background-color: white !important;
+  }
+  
+  /* Add borders to separate sections */
+  .recipe-section {
+    border-bottom: 1px solid #e5e7eb !important;
+    padding-bottom: 5mm !important;
+  }
+  
+  /* Adjust spacing */
+  .mb-8, .mb-6, .mb-4 {
+    margin-bottom: 5mm !important;
+  }
+  
+  .p-6, .p-4 {
+    padding: 0 !important;
+  }
+  
+  /* Remove rounded corners */
+  .rounded-lg, .rounded-md, .rounded-full {
+    border-radius: 0 !important;
+  }
+
+  /* Optimize space usage */
+  .space-y-4, .space-y-3, .space-y-2 {
+    margin-top: 0 !important;
+  }
+
+  .space-y-4 > *, .space-y-3 > *, .space-y-2 > * {
+    margin-top: 0 !important;
+    margin-bottom: 3mm !important;
+  }
+
+  /* Remove sticky positioning */
+  .sticky {
+    position: static !important;
+  }
+  
+  /* Hide "print" specific elements */
+  .print\:hidden {
+    display: none !important;
+  }
+
+  /* Show print-only elements */
+  .print\:block {
+    display: block !important;
+  }
+  
+  /* Reposition the main recipe image for printing */
+  .lg\:hidden {
+    display: block !important;
+    max-width: 120mm !important;
+    margin: 5mm auto 10mm auto !important;
+  }
+  
+  .hidden.lg\:block {
+    display: none !important;
+  }
+}
