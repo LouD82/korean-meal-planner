@@ -59,17 +59,20 @@ export const loadUserSettings = (): UserSettings => {
 const mergeWithDefaults = (savedSettings: Partial<UserSettings>): UserSettings => {
   // Deep merge function for object properties
   const mergeDeep = <T extends Record<string, any>>(target: T, source: Partial<T>): T => {
-    const result = { ...target };
+    const result = { ...target } as T;
     
     if (!source) return result;
     
     Object.keys(source).forEach(key => {
-      if (source[key] !== null && typeof source[key] === 'object' && !Array.isArray(source[key])) {
+      const sourceKey = key as keyof typeof source;
+      const targetKey = key as keyof typeof target;
+      
+      if (source[sourceKey] !== null && typeof source[sourceKey] === 'object' && !Array.isArray(source[sourceKey])) {
         // If property is an object, recursively merge
-        result[key] = mergeDeep(target[key] as any, source[key] as any);
+        result[targetKey] = mergeDeep(target[targetKey], source[sourceKey] as any) as any;
       } else {
         // Otherwise just copy the value
-        result[key] = source[key] as any;
+        result[targetKey] = source[sourceKey] as any;
       }
     });
     

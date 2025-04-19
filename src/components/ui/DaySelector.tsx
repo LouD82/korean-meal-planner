@@ -67,60 +67,62 @@ const DaySelector: React.FC<DaySelectorProps> = ({
         ))}
       </div>
       
-      <style jsx>{`
-        .day-selector-container {
-          margin-bottom: 1rem;
-        }
-        
-        .day-selector {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 0.5rem;
-        }
-        
-        .day-button {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 2.5rem;
-          height: 2.5rem;
-          border-radius: 50%;
-          border: 1px solid #d1d5db;
-          background-color: white;
-          font-size: 0.75rem;
-          font-weight: 500;
-          cursor: pointer;
-          transition: all 0.2s ease-in-out;
-        }
-        
-        .day-button:hover:not(.disabled) {
-          border-color: #166534;
-          color: #166534;
-        }
-        
-        .day-button.selected {
-          background-color: #166534;
-          color: white;
-          border-color: #166534;
-        }
-        
-        .day-button.disabled {
-          opacity: 0.5;
-          cursor: not-allowed;
-        }
-        
-        @media (max-width: 640px) {
-          .day-button {
-            width: 2rem;
-            height: 2rem;
-            font-size: 0.7rem;
+      <style>
+        {`
+          .day-selector-container {
+            margin-bottom: 1rem;
           }
           
           .day-selector {
-            justify-content: center;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
           }
-        }
-      `}</style>
+          
+          .day-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: 1px solid #d1d5db;
+            background-color: white;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+          }
+          
+          .day-button:hover:not(.disabled) {
+            border-color: #166534;
+            color: #166534;
+          }
+          
+          .day-button.selected {
+            background-color: #166534;
+            color: white;
+            border-color: #166534;
+          }
+          
+          .day-button.disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+          }
+          
+          @media (max-width: 640px) {
+            .day-button {
+              width: 2rem;
+              height: 2rem;
+              font-size: 0.7rem;
+            }
+            
+            .day-selector {
+              justify-content: center;
+            }
+          }
+        `}
+      </style>
     </div>
   );
 };

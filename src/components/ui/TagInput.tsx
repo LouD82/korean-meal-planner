@@ -1,5 +1,5 @@
 import React, { useState, KeyboardEvent } from 'react';
-import { Button } from './Button';
+import Button from './Button';
 import './theme.css';
 
 interface TagInputProps {
@@ -115,72 +115,74 @@ const TagInput: React.FC<TagInputProps> = ({
       
       {error && <div className="tag-input-error">{error}</div>}
       
-      <style jsx>{`
-        .tag-input-container {
-          margin-bottom: 1rem;
-        }
-        
-        .tag-input-wrapper {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-          border: 1px solid #d1d5db;
-          border-radius: 0.25rem;
-          padding: 0.25rem;
-          min-height: 2.5rem;
-          background-color: white;
-        }
-        
-        .tag {
-          display: flex;
-          align-items: center;
-          background-color: #e2f5ea;
-          color: #166534;
-          border-radius: 0.25rem;
-          padding: 0.25rem 0.5rem;
-          margin: 0.25rem;
-          font-size: 0.875rem;
-          max-width: 100%;
-          overflow: hidden;
-        }
-        
-        .tag span {
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        
-        .tag-remove-btn {
-          background: none;
-          border: none;
-          color: #166534;
-          cursor: pointer;
-          margin-left: 0.25rem;
-          font-size: 1rem;
-          line-height: 1;
-          display: flex;
-          align-items: center;
-        }
-        
-        .tag-input {
-          flex: 1;
-          border: none;
-          outline: none;
-          padding: 0.5rem;
-          font-size: 0.875rem;
-          min-width: 50px;
-        }
-        
-        .tag-add-btn {
-          margin-top: 0.5rem;
-        }
-        
-        .tag-input-error {
-          color: #b91c1c;
-          font-size: 0.75rem;
-          margin-top: 0.25rem;
-        }
-      `}</style>
+      <style>
+        {`
+          .tag-input-container {
+            margin-bottom: 1rem;
+          }
+          
+          .tag-input-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            padding: 0.25rem;
+            min-height: 2.5rem;
+            background-color: white;
+          }
+          
+          .tag {
+            display: flex;
+            align-items: center;
+            background-color: #e2f5ea;
+            color: #166534;
+            border-radius: 0.25rem;
+            padding: 0.25rem 0.5rem;
+            margin: 0.25rem;
+            font-size: 0.875rem;
+            max-width: 100%;
+            overflow: hidden;
+          }
+          
+          .tag span {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          
+          .tag-remove-btn {
+            background: none;
+            border: none;
+            color: #166534;
+            cursor: pointer;
+            margin-left: 0.25rem;
+            font-size: 1rem;
+            line-height: 1;
+            display: flex;
+            align-items: center;
+          }
+          
+          .tag-input {
+            flex: 1;
+            border: none;
+            outline: none;
+            padding: 0.5rem;
+            font-size: 0.875rem;
+            min-width: 50px;
+          }
+          
+          .tag-add-btn {
+            margin-top: 0.5rem;
+          }
+          
+          .tag-input-error {
+            color: #b91c1c;
+            font-size: 0.75rem;
+            margin-top: 0.25rem;
+          }
+        `}
+      </style>
     </div>
   );
 };
