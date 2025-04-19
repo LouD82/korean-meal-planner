@@ -3,6 +3,7 @@ import { WeeklyMealPlan, Recipe } from '../types/recipe'
 import { getAllMealPlans, getRecipeById } from '../utils/recipeUtils'
 import { getCurrentMealPlanId } from '../utils/storageUtils'
 import MealPlanDisplay from '../components/mealplan/MealPlanDisplay'
+import MealPlanGenerator from '../components/mealplan/MealPlanGenerator'
 import { useCurrentMealPlan } from '../hooks/useMealPlan'
 
 interface EnhancedMealPlan extends WeeklyMealPlan {
@@ -53,9 +54,45 @@ const MealPlansPage = () => {
     setAsCurrentMealPlan(planId)
   }
 
+  // Handle meal plan generation completion
+  const handleMealPlanGenerated = async (mealPlan: WeeklyMealPlan) => {
+    // Reload meal plans to include the new one
+    try {
+      setLoading(true);
+      
+      // Load meal plans
+      const mealPlansData = await getAllMealPlans();
+      
+      // Load recipe details for each meal plan
+      const enhancedMealPlans = await Promise.all(mealPlansData.map(async (plan) => {
+        const lunchRecipe = await getRecipeById(plan.lunchRecipeId);
+        const dinnerRecipe = await getRecipeById(plan.dinnerRecipeId);
+        
+        return {
+          ...plan,
+          lunchRecipe,
+          dinnerRecipe
+        };
+      }));
+      
+      setMealPlans(enhancedMealPlans);
+    } catch (error) {
+      console.error('Error reloading meal plans:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Meal Plans</h2>
+      
+      {/* Meal Plan Generator */}
+      <div className="mb-8">
+        <MealPlanGenerator onMealPlanGenerated={handleMealPlanGenerated} />
+      </div>
+      
+      <h3 className="text-2xl font-semibold mb-4">Your Meal Plans</h3>
       
       {loading ? (
         <p className="text-center">Loading meal plans...</p>
@@ -72,7 +109,7 @@ const MealPlansPage = () => {
           ))}
         </div>
       ) : (
-        <p className="text-center">No meal plans available.</p>
+        <p className="text-center">No meal plans available. Generate your first meal plan above!</p>
       )}
     </div>
   )

@@ -30,13 +30,30 @@ export const getRecipeById = async (id: string): Promise<Recipe | undefined> => 
   return recipes.find(recipe => recipe.id === id);
 };
 
+import { getUserMealPlans } from './storageUtils';
+
 /**
  * Gets all weekly meal plans
  * @returns Promise that resolves to an array of meal plans
  */
 export const getAllMealPlans = async (): Promise<WeeklyMealPlan[]> => {
   try {
-    // Fetch the meal plans from the JSON file
+    // First, check for user-generated meal plans in local storage
+    const userMealPlansJson = getUserMealPlans();
+    if (userMealPlansJson) {
+      try {
+        const userMealPlans = JSON.parse(userMealPlansJson);
+        // If we have valid user-generated meal plans, return those
+        if (Array.isArray(userMealPlans) && userMealPlans.length > 0) {
+          return userMealPlans;
+        }
+      } catch (parseError) {
+        console.error('Error parsing user meal plans:', parseError);
+        // Continue to fetch from JSON file if parsing fails
+      }
+    }
+    
+    // If no user-generated meal plans, fetch the default meal plans from the JSON file
     const response = await fetch('/data/recipes.json');
     if (!response.ok) {
       throw new Error('Failed to fetch meal plans');

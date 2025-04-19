@@ -27,6 +27,7 @@ export interface UserSettings {
     includeLunch: boolean;
     includeDinner: boolean;
     allowRepeatRecipes: boolean;
+    autoSelectNewPlan: boolean;
   };
   
   // Shopping preferences
@@ -77,6 +78,7 @@ export const DEFAULT_USER_SETTINGS: UserSettings = {
     includeLunch: true,
     includeDinner: true,
     allowRepeatRecipes: false,
+    autoSelectNewPlan: true,
   },
   shopping: {
     preferredStoreLocation: 'H-Mart',

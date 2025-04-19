@@ -373,6 +373,15 @@ const SettingsPage = () => {
                       label="Allow recipes to repeat within the same rotation period"
                     />
                   </div>
+                  
+                  <div className="settings-form-row">
+                    <Checkbox 
+                      id="autoSelectNewPlan" 
+                      checked={settings.mealPlanning.autoSelectNewPlan}
+                      onChange={(e) => updateMealPlanningSettings('autoSelectNewPlan', e.target.checked)}
+                      label="Automatically select newly generated meal plans as current"
+                    />
+                  </div>
                 </div>
               )}
               
