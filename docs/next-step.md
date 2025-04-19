@@ -1,14 +1,11 @@
 # Next Step
 
-Implement the RecipeDetail component to display comprehensive recipe information.
+Implement Current Meal Plan Selection and Local Storage Functionality.
 
 This task involves:
 
-1. Enhancing the existing RecipeDetailPage component to display all recipe information
-2. Creating a structured layout to display:
-   - Recipe ingredients with quantities and units
-   - Step-by-step cooking instructions
-   - Batch cooking instructions
-   - Serving information
+1. Enhancing the MealPlansPage to allow users to select a meal plan as the current active plan
+2. Using local storage to persist the user's selected meal plan across browser sessions
+3. Updating the HomePage to display the currently selected meal plan prominently
 
-This is a focused implementation task that builds on the existing RecipeDetailPage structure, making use of the recipe data model that's already in place. It will provide users with complete recipe information when they click on a recipe card, which is a core requirement of the application as outlined in the project specs.
+This focused implementation task builds on the existing meal plan functionality, adding the ability for users to select and save their preferred meal plan. It addresses a core requirement from the project outline: allowing users to view a weekly meal plan with rotated lunch and dinner options that persists between sessions.
