@@ -1,3 +1,6 @@
+# Session 13
+Implemented current meal plan selection and local storage functionality, allowing users to select and persist their preferred meal plan across browser sessions.
+
 # Session 12
 Implemented the RecipeDetail component with comprehensive recipe information, enhanced layout, and responsive design to display complete recipe details when a recipe card is clicked.
 
