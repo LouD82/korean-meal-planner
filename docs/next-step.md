@@ -1,11 +1,11 @@
 # Next Step
 
-Implement Grocery List Optimization to Reduce Duplicate Ingredients.
+Implement Print and Clipboard Functionality for Grocery Lists.
 
 This task involves:
 
-1. Enhancing the grocery list generation functionality to combine duplicate ingredients and similar items
-2. Creating a utility function that aggregates ingredient amounts with the same name
-3. Implementing unit conversion for compatible measurements (e.g., combining 1 tbsp and 2 tsp of the same ingredient)
+1. Implementing the Print List button functionality to allow users to print their grocery list
+2. Implementing the Copy to Clipboard button functionality to allow users to copy the grocery list to their clipboard
+3. Adding appropriate feedback to users when the copy action is successful
 
-This focused implementation task improves the grocery list feature, addressing a key issue observed in the current implementation - multiple occurrences of the same or similar ingredients that should be combined. This enhances the user experience by providing a more organized and efficient grocery list, better supporting the project goal of simplifying meal planning and preparation.
+This focused implementation task will enhance the usability of the grocery list feature by allowing users to easily print their shopping list or copy it to their clipboard, supporting the project's goal of facilitating meal planning and preparation.

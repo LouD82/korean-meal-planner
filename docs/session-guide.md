@@ -1,3 +1,6 @@
+# Session 14
+Implemented grocery list optimization functionality to combine duplicate ingredients and similar items, creating a more user-friendly shopping experience.
+
 # Session 13
 Implemented current meal plan selection and local storage functionality, allowing users to select and persist their preferred meal plan across browser sessions.
 
