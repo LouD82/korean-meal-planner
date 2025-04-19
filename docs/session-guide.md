@@ -1,3 +1,6 @@
+# Session 12
+Implemented the RecipeDetail component with comprehensive recipe information, enhanced layout, and responsive design to display complete recipe details when a recipe card is clicked.
+
 # Session 10
 Implemented React Router for navigation between views, creating a structured page system with consistent layout and navigation.
 
