@@ -1,29 +1,28 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { Recipe, WeeklyMealPlan } from '../types/recipe'
-import { getAllRecipes, getCurrentMealPlan } from '../utils/recipeUtils'
+import { Recipe } from '../types/recipe'
+import { getAllRecipes } from '../utils/recipeUtils'
 import RecipeCard from '../components/recipes/RecipeCard'
+import { useCurrentMealPlan } from '../hooks/useMealPlan'
+import MealPlanDisplay from '../components/mealplan/MealPlanDisplay'
 
 /**
- * HomePage component that displays the main page with recipe cards
+ * HomePage component that displays the main page with the current meal plan and recipe cards
  */
 const HomePage = () => {
   const [recipes, setRecipes] = useState<Recipe[]>([])
-  const [currentMealPlan, setCurrentMealPlan] = useState<WeeklyMealPlan | null>(null)
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
+  const { currentMealPlan, loading: mealPlanLoading } = useCurrentMealPlan()
 
   useEffect(() => {
     const loadInitialData = async () => {
       try {
         setLoading(true)
         
-        // Load recipes and current meal plan
+        // Load recipes
         const recipesData = await getAllRecipes()
-        const mealPlanData = await getCurrentMealPlan()
-        
         setRecipes(recipesData)
-        setCurrentMealPlan(mealPlanData)
       } catch (error) {
         console.error('Error loading initial data:', error)
       } finally {
@@ -49,16 +48,29 @@ const HomePage = () => {
       </div>
 
       <div>
-        {loading ? (
+        {loading || mealPlanLoading ? (
           <p className="text-center">Loading...</p>
         ) : (
           <div>
             <section className="mb-8">
               <h2 className="text-2xl font-semibold mb-4">Current Meal Plan</h2>
               {currentMealPlan ? (
-                <p>Meal plan display will go here</p>
+                <div className="max-w-3xl mx-auto">
+                  <MealPlanDisplay 
+                    mealPlan={currentMealPlan}
+                    isCurrentPlan={true}
+                  />
+                </div>
               ) : (
-                <p>No meal plan is currently selected. Choose recipes to create a plan.</p>
+                <div className="bg-white rounded-lg shadow-md p-6 text-center max-w-3xl mx-auto">
+                  <p className="mb-4">No meal plan is currently selected.</p>
+                  <a 
+                    href="/meal-plans" 
+                    className="inline-block bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-300"
+                  >
+                    Choose a Meal Plan
+                  </a>
+                </div>
               )}
             </section>
 

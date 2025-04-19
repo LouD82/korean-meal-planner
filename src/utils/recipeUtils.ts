@@ -50,6 +50,8 @@ export const getAllMealPlans = async (): Promise<WeeklyMealPlan[]> => {
   }
 };
 
+import { getCurrentMealPlanId } from './storageUtils';
+
 /**
  * Gets the current weekly meal plan
  * @returns Promise that resolves to the current weekly meal plan
@@ -57,9 +59,17 @@ export const getAllMealPlans = async (): Promise<WeeklyMealPlan[]> => {
 export const getCurrentMealPlan = async (): Promise<WeeklyMealPlan | null> => {
   try {
     const mealPlans = await getAllMealPlans();
+    const currentMealPlanId = getCurrentMealPlanId();
     
-    // For now, just return the first meal plan as the current one
-    // In a more advanced implementation, this could be based on the current date or user selection
+    // If there's a selected meal plan in local storage, find and return it
+    if (currentMealPlanId) {
+      const selectedPlan = mealPlans.find(plan => plan.id === currentMealPlanId);
+      if (selectedPlan) {
+        return selectedPlan;
+      }
+    }
+    
+    // If no valid plan is found in local storage, return the first plan (default)
     return mealPlans.length > 0 ? mealPlans[0] : null;
   } catch (error) {
     console.error('Error getting current meal plan:', error);

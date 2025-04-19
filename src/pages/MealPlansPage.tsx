@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
 import { WeeklyMealPlan, Recipe } from '../types/recipe'
 import { getAllMealPlans, getRecipeById } from '../utils/recipeUtils'
+import { getCurrentMealPlanId } from '../utils/storageUtils'
+import MealPlanDisplay from '../components/mealplan/MealPlanDisplay'
+import { useCurrentMealPlan } from '../hooks/useMealPlan'
 
 interface EnhancedMealPlan extends WeeklyMealPlan {
   lunchRecipe?: Recipe
@@ -14,6 +16,7 @@ interface EnhancedMealPlan extends WeeklyMealPlan {
 const MealPlansPage = () => {
   const [mealPlans, setMealPlans] = useState<EnhancedMealPlan[]>([])
   const [loading, setLoading] = useState(true)
+  const { currentMealPlan, setAsCurrentMealPlan } = useCurrentMealPlan()
 
   useEffect(() => {
     const loadMealPlans = async () => {
@@ -46,6 +49,10 @@ const MealPlansPage = () => {
     loadMealPlans()
   }, [])
 
+  const handleSelectAsCurrent = (planId: number) => {
+    setAsCurrentMealPlan(planId)
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h2 className="text-3xl font-bold mb-6">Meal Plans</h2>
@@ -55,74 +62,13 @@ const MealPlansPage = () => {
       ) : mealPlans.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {mealPlans.map((plan) => (
-            <div key={plan.id} className="bg-white rounded-lg shadow-md overflow-hidden">
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-4">Week {plan.weekNumber}</h3>
-                
-                <div className="mb-4">
-                  <h4 className="font-semibold text-amber-800 mb-2">Lunch</h4>
-                  {plan.lunchRecipe ? (
-                    <div className="flex items-center">
-                      <div className="w-16 h-16 mr-4 overflow-hidden rounded">
-                        <img 
-                          src={plan.lunchRecipe.imageUrl || '/placeholder-recipe.jpg'} 
-                          alt={plan.lunchRecipe.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <Link 
-                          to={`/recipe/${plan.lunchRecipeId}`}
-                          className="text-green-600 hover:text-green-800 font-medium"
-                        >
-                          {plan.lunchRecipe.name}
-                        </Link>
-                        <p className="text-sm text-gray-500">
-                          {plan.lunchRecipe.prepTime + plan.lunchRecipe.cookTime} min total
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <p>Recipe not found</p>
-                  )}
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-indigo-800 mb-2">Dinner</h4>
-                  {plan.dinnerRecipe ? (
-                    <div className="flex items-center">
-                      <div className="w-16 h-16 mr-4 overflow-hidden rounded">
-                        <img 
-                          src={plan.dinnerRecipe.imageUrl || '/placeholder-recipe.jpg'} 
-                          alt={plan.dinnerRecipe.name} 
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div>
-                        <Link 
-                          to={`/recipe/${plan.dinnerRecipeId}`}
-                          className="text-green-600 hover:text-green-800 font-medium"
-                        >
-                          {plan.dinnerRecipe.name}
-                        </Link>
-                        <p className="text-sm text-gray-500">
-                          {plan.dinnerRecipe.prepTime + plan.dinnerRecipe.cookTime} min total
-                        </p>
-                      </div>
-                    </div>
-                  ) : (
-                    <p>Recipe not found</p>
-                  )}
-                </div>
-                
-                <Link 
-                  to={`/grocery-list?week=${plan.weekNumber}`}
-                  className="mt-6 block w-full bg-green-600 text-white py-2 text-center rounded-md hover:bg-green-700 transition-colors duration-300"
-                >
-                  Generate Grocery List
-                </Link>
-              </div>
-            </div>
+            <MealPlanDisplay 
+              key={plan.id}
+              mealPlan={plan}
+              isCurrentPlan={currentMealPlan?.id === plan.id}
+              onSelectAsCurrent={() => handleSelectAsCurrent(plan.id)}
+              showSelectButton={true}
+            />
           ))}
         </div>
       ) : (
