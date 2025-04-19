@@ -1,11 +1,11 @@
 # Next Step
 
-Implement Current Meal Plan Selection and Local Storage Functionality.
+Implement Grocery List Optimization to Reduce Duplicate Ingredients.
 
 This task involves:
 
-1. Enhancing the MealPlansPage to allow users to select a meal plan as the current active plan
-2. Using local storage to persist the user's selected meal plan across browser sessions
-3. Updating the HomePage to display the currently selected meal plan prominently
+1. Enhancing the grocery list generation functionality to combine duplicate ingredients and similar items
+2. Creating a utility function that aggregates ingredient amounts with the same name
+3. Implementing unit conversion for compatible measurements (e.g., combining 1 tbsp and 2 tsp of the same ingredient)
 
-This focused implementation task builds on the existing meal plan functionality, adding the ability for users to select and save their preferred meal plan. It addresses a core requirement from the project outline: allowing users to view a weekly meal plan with rotated lunch and dinner options that persists between sessions.
+This focused implementation task improves the grocery list feature, addressing a key issue observed in the current implementation - multiple occurrences of the same or similar ingredients that should be combined. This enhances the user experience by providing a more organized and efficient grocery list, better supporting the project goal of simplifying meal planning and preparation.
