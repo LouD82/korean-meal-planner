@@ -228,6 +228,255 @@
       "imageUrl": "/images/ground-beef-bulgogi.jpg"
     },
     {
+      "id": "japchae",
+      "name": "Japchae (Korean Glass Noodle Stir-Fry)",
+      "type": "lunch",
+      "description": "Japchae is a colorful and nutritious Korean glass noodle dish loaded with vegetables and protein. It's perfect for batch cooking as it holds up well in the refrigerator and can be enjoyed both hot and cold, making it ideal for weekly meal prepping.",
+      "prepTime": 30,
+      "cookTime": 20,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "Korean sweet potato glass noodles (dangmyeon)",
+          "amount": "8",
+          "unit": "oz"
+        },
+        {
+          "name": "thinly sliced beef (sirloin or ribeye, optional)",
+          "amount": "8",
+          "unit": "oz"
+        },
+        {
+          "name": "spinach",
+          "amount": "4",
+          "unit": "cups"
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "large"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "bell pepper (red or green)",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "shiitake mushrooms",
+          "amount": "6",
+          "unit": ""
+        },
+        {
+          "name": "garlic",
+          "amount": "3",
+          "unit": "cloves"
+        },
+        {
+          "name": "eggs",
+          "amount": "2",
+          "unit": ""
+        },
+        {
+          "name": "soy sauce",
+          "amount": "1/4",
+          "unit": "cup"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sugar",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "3",
+          "unit": "tbsp"
+        },
+        {
+          "name": "toasted sesame seeds",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "salt",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "black pepper",
+          "amount": "1/2",
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "Soak glass noodles in warm water for 20 minutes until softened. Drain well."
+        },
+        {
+          "description": "Bring a large pot of water to a boil. Add the glass noodles and cook for 3-5 minutes until tender but still chewy. Drain, rinse under cold water, and cut into shorter lengths with scissors."
+        },
+        {
+          "description": "In a bowl, mix 2 tbsp soy sauce, 1 tbsp sesame oil, 1 tbsp sugar, 1 tsp minced garlic, and black pepper. Toss the noodles in this mixture and set aside."
+        },
+        {
+          "description": "For the beef (if using): In a small bowl, mix beef with 1 tbsp soy sauce, 1 tsp sugar, and 1 tsp minced garlic. Let marinate for 10 minutes."
+        },
+        {
+          "description": "Heat 1 tbsp vegetable oil in a large pan over medium-high heat. Add the marinated beef and stir-fry until fully cooked, about 2-3 minutes. Remove and set aside."
+        },
+        {
+          "description": "In the same pan, add a bit more oil and scramble the eggs. Remove and set aside."
+        },
+        {
+          "description": "Still using the same pan, stir-fry each vegetable separately with a pinch of salt: onions until translucent, carrots and bell peppers until slightly softened, mushrooms until browned. Set each aside after cooking."
+        },
+        {
+          "description": "Blanch spinach in boiling water for 30 seconds, drain, rinse under cold water, and squeeze out excess moisture. Season with a pinch of salt and a few drops of sesame oil."
+        },
+        {
+          "description": "In the same large pan, add the seasoned noodles and stir-fry for 2-3 minutes until the sauce is well absorbed."
+        },
+        {
+          "description": "Add all the cooked vegetables, beef, and eggs back to the pan. Toss everything together with the remaining soy sauce and sesame oil."
+        },
+        {
+          "description": "Season with salt and pepper to taste. Sprinkle with toasted sesame seeds before serving."
+        }
+      ],
+      "batchCookingInstructions": "Allow Japchae to cool completely before dividing into airtight containers. Store in the refrigerator for up to 4 days. Japchae can be enjoyed both cold and hot. For reheating, microwave for 1-2 minutes or stir-fry in a pan with a little sesame oil for 2-3 minutes until heated through. For longer storage, Japchae can be frozen for up to 2 months. Thaw overnight in the refrigerator before reheating. Note that the noodles may become slightly softer after freezing and thawing.",
+      "imageUrl": "/images/japchae.jpg"
+    },
+    {
+      "id": "tteokbokki",
+      "name": "Gungjung Tteokbokki (Royal Korean Rice Cakes)",
+      "type": "lunch",
+      "description": "Gungjung Tteokbokki is the traditional 'royal court' version of Korean rice cakes, made with a savory soy sauce-based seasoning rather than the spicy version commonly found today. This milder version is perfect for batch cooking and meal prep, offering a delicious and filling lunch option throughout the week.",
+      "prepTime": 15,
+      "cookTime": 15,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "Korean rice cakes (tteok)",
+          "amount": "1",
+          "unit": "lb"
+        },
+        {
+          "name": "thinly sliced beef (optional)",
+          "amount": "4",
+          "unit": "oz"
+        },
+        {
+          "name": "carrot",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "onion",
+          "amount": "1/2",
+          "unit": "medium"
+        },
+        {
+          "name": "green onions",
+          "amount": "3",
+          "unit": ""
+        },
+        {
+          "name": "shiitake mushrooms",
+          "amount": "4",
+          "unit": ""
+        },
+        {
+          "name": "garlic",
+          "amount": "2",
+          "unit": "cloves"
+        },
+        {
+          "name": "soy sauce",
+          "amount": "3",
+          "unit": "tbsp"
+        },
+        {
+          "name": "brown sugar",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "2",
+          "unit": "tbsp"
+        },
+        {
+          "name": "beef or vegetable broth",
+          "amount": "1",
+          "unit": "cup"
+        },
+        {
+          "name": "toasted sesame seeds",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "black pepper",
+          "amount": "1/4",
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "If using frozen rice cakes, soak them in warm water for 15-20 minutes until softened. If using fresh ones, you can skip this step."
+        },
+        {
+          "description": "Julienne the carrot, slice the onion thinly, chop the green onions, and slice the mushrooms."
+        },
+        {
+          "description": "If using beef, cut it into thin strips and marinate with 1 tbsp soy sauce and a pinch of black pepper for 10 minutes."
+        },
+        {
+          "description": "In a small bowl, mix together the sauce: remaining soy sauce, brown sugar, minced garlic, and black pepper."
+        },
+        {
+          "description": "Heat vegetable oil in a large pan or wok over medium-high heat."
+        },
+        {
+          "description": "If using beef, stir-fry it first until cooked through, about 2-3 minutes. Remove and set aside."
+        },
+        {
+          "description": "In the same pan, add a bit more oil if needed and stir-fry the onions and carrots for 2-3 minutes until they begin to soften."
+        },
+        {
+          "description": "Add mushrooms and cook for another 1-2 minutes."
+        },
+        {
+          "description": "Add the softened and drained rice cakes, broth, and the prepared sauce."
+        },
+        {
+          "description": "Cook for about 3-5 minutes, stirring gently until the rice cakes are tender and the sauce has thickened."
+        },
+        {
+          "description": "Return the beef to the pan if using, add the green onions, and cook for another minute, stirring to combine everything."
+        },
+        {
+          "description": "Drizzle with sesame oil and sprinkle with toasted sesame seeds before removing from heat."
+        }
+      ],
+      "batchCookingInstructions": "Allow the tteokbokki to cool completely before dividing into portion-sized containers. Store in the refrigerator for up to 3-4 days. To reheat, add a tablespoon of water or broth to prevent drying, and microwave for 1-2 minutes or gently reheat in a pan. For longer storage, you can freeze portions for up to 1 month. Thaw overnight in the refrigerator before reheating. Note that the texture of the rice cakes may change slightly after freezing, becoming a bit softer when reheated.",
+      "imageUrl": "/images/tteokbokki.jpg"
+    },
+    {
       "id": "bibimbap",
       "name": "Bibimbap Meal Prep Bowls",
       "type": "dinner",
@@ -472,6 +721,126 @@
       ],
       "batchCookingInstructions": "Refrigerate: Store in airtight containers for up to 5 days. The flavor will actually improve after the first day! Freeze: This stew freezes very well. Portion into freezer-safe containers and freeze for up to 2 months. Thaw overnight in the refrigerator before reheating. To reheat on stovetop (preferred method): Transfer to a small pot and heat over medium heat for 5-7 minutes, stirring occasionally. For microwave: Heat for 2-3 minutes, stirring halfway through. Serve hot with a side of fresh steamed rice and kimchi.",
       "imageUrl": "/images/doenjang-jjigae.jpg"
+    },
+    {
+      "id": "kimchi-jjigae",
+      "name": "Kimchi Jjigae (Kimchi Stew)",
+      "type": "dinner",
+      "description": "Kimchi Jjigae is a spicy, flavorful Korean stew made with aged kimchi, pork belly, and tofu. It's one of Korea's most beloved comfort foods and perfect for batch cooking since the flavors deepen over time, making it an excellent option for weekly meal prep.",
+      "prepTime": 15,
+      "cookTime": 30,
+      "servings": 5,
+      "ingredients": [
+        {
+          "name": "aged kimchi (at least 2 weeks old)",
+          "amount": "2",
+          "unit": "cups"
+        },
+        {
+          "name": "kimchi juice",
+          "amount": "1/2",
+          "unit": "cup"
+        },
+        {
+          "name": "pork belly (sliced)",
+          "amount": "1/2",
+          "unit": "lb"
+        },
+        {
+          "name": "firm tofu",
+          "amount": "14",
+          "unit": "oz"
+        },
+        {
+          "name": "onion",
+          "amount": "1",
+          "unit": "medium"
+        },
+        {
+          "name": "green onions",
+          "amount": "2",
+          "unit": ""
+        },
+        {
+          "name": "garlic",
+          "amount": "3",
+          "unit": "cloves"
+        },
+        {
+          "name": "gochugaru (Korean red pepper flakes)",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "gochujang (Korean red pepper paste)",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "vegetable oil",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "water or anchovy stock",
+          "amount": "3",
+          "unit": "cups"
+        },
+        {
+          "name": "sugar",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "fish sauce or soy sauce",
+          "amount": "1",
+          "unit": "tbsp"
+        },
+        {
+          "name": "sesame oil",
+          "amount": "1",
+          "unit": "tsp"
+        },
+        {
+          "name": "sesame seeds",
+          "amount": "1",
+          "unit": "tsp"
+        }
+      ],
+      "steps": [
+        {
+          "description": "Chop kimchi into bite-sized pieces and set aside. Reserve the kimchi juice."
+        },
+        {
+          "description": "Heat vegetable oil in a large pot over medium heat. Add sliced pork belly and cook until it starts to render its fat, about 3-4 minutes."
+        },
+        {
+          "description": "Add chopped kimchi, gochujang, gochugaru, and sugar. Stir-fry for about 3-5 minutes until the kimchi becomes translucent and the mixture is well combined and fragrant."
+        },
+        {
+          "description": "Add the kimchi juice, water or stock, and sliced onions. Bring to a boil, then reduce heat and simmer for about 15 minutes with the lid on."
+        },
+        {
+          "description": "While the stew is simmering, cut the tofu into 1/2-inch thick slices or cubes."
+        },
+        {
+          "description": "Add the tofu to the stew carefully to avoid breaking the pieces. Simmer for another 5 minutes."
+        },
+        {
+          "description": "Taste and adjust seasoning if needed, adding fish sauce or soy sauce for saltiness."
+        },
+        {
+          "description": "Just before serving, add chopped green onions and a drizzle of sesame oil."
+        },
+        {
+          "description": "Sprinkle with sesame seeds."
+        },
+        {
+          "description": "Allow the stew to cool completely before dividing into portion-sized containers for meal prep."
+        }
+      ],
+      "batchCookingInstructions": "Refrigerate: Store in airtight containers for up to 5 days. The flavor will actually improve and mellow after a day or two! Freeze: This stew freezes well. Portion into freezer-safe containers and freeze for up to 2 months. Thaw overnight in the refrigerator before reheating. Reheating: On stovetop (preferred method): Transfer to a small pot and heat over medium heat for 5-7 minutes, stirring occasionally. For microwave: Heat for 2-3 minutes, stirring halfway through. Serve hot with freshly cooked white rice. For a complete meal, you can add a fried egg on top when reheating.",
+      "imageUrl": "/images/kimchi-jjigae.jpg"
     }
   ],
   "weeklyMealPlans": [
@@ -486,6 +855,18 @@
       "weekNumber": 2,
       "lunchRecipeId": "ground-beef-bulgogi",
       "dinnerRecipeId": "doenjang-jjigae"
+    },
+    {
+      "id": 3,
+      "weekNumber": 3,
+      "lunchRecipeId": "japchae",
+      "dinnerRecipeId": "kimchi-jjigae"
+    },
+    {
+      "id": 4,
+      "weekNumber": 4,
+      "lunchRecipeId": "tteokbokki",
+      "dinnerRecipeId": "bibimbap"
     }
   ]
 }
